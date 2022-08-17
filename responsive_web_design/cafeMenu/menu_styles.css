@@ -22,6 +22,11 @@ h2 {
   padding: 20px;
   max-width: 500px;
 }
+hr {
+  height: 3px;
+  background-color: brown;
+  border-color: brown;
+}
 h1, h2 {
   font-family: Impact, serif;
 }

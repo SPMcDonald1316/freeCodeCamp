@@ -5,6 +5,15 @@ body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif;
 }
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+.established {
+  font-style: italic;
+}
 .menu {
   width: 80%;
   background-color: burlywood;

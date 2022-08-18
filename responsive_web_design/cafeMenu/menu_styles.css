@@ -4,6 +4,7 @@ h1, h2, p {
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif;
+  padding: 20px;
 }
 h1 {
   font-size: 40px;
@@ -23,7 +24,7 @@ h2 {
   max-width: 500px;
 }
 hr {
-  height: 3px;
+  height: 2px;
   background-color: brown;
   border-color: brown;
 }
@@ -40,4 +41,6 @@ h1, h2 {
 }
 .item p {
   display: inline-block;
+  margin: 5 0;
+  font-size: 18px;
 }

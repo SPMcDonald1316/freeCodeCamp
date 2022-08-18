@@ -8,6 +8,7 @@ body {
 }
 h1 {
   font-size: 40px;
+  margin-top: 0px;
 }
 h2 {
   font-size: 30px;
@@ -54,4 +55,13 @@ footer {
 }
 a {
   color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: brown;
+}
+a:active {
+  color: brown;
 }

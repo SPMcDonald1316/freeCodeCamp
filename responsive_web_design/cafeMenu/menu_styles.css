@@ -44,3 +44,14 @@ h1, h2 {
   margin: 5 0;
   font-size: 18px;
 }
+.bottom-line {
+  margin-top: 25px;
+}
+
+/* FOOTER */
+footer {
+  font-size: 14px;
+}
+a {
+  color: black;
+}

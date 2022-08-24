@@ -11,10 +11,10 @@ h1 {
   margin: 10px auto;
 }
 .red {
-  background-color: linear-gradient(90deg);
+  background: linear-gradient(180deg, rgb(122, 74, 14) 0%, rgb(245, 62, 113) 50%, rgb(162, 27, 27) 100%);
 }
 .green {
-  background-color: #007F00;
+  background: #007F00;
 }
 .blue {
   background-color: rgb(255, 0, 127);

@@ -10,12 +10,12 @@ h1 {
   height: 25px;
   margin: 10px auto;
 }
-.one {
-  background-color: rgb(127, 255, 0);
+.red {
+  background-color: linear-gradient(90deg);
 }
-.two {
-  background-color: rgb(0, 127, 255);
+.green {
+  background-color: #007F00;
 }
-.three {
+.blue {
   background-color: rgb(255, 0, 127);
 }

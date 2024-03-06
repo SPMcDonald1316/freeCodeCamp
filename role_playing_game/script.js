@@ -22,6 +22,14 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
-const goStore = () => console.log("Going to store.");
+const goStore = () => {
+  button1.innerText = "Buy 10 health (10 gold)";
+  button2.innerText = "Buy weapon (30 gold)";
+  button3.innerText = "Go to town square";
+  button1.onclick = buyHealth;
+  button2.onclick = buyWeapon;
+  button3.onclick = goTown;
+  text.innerText = "You enter the store.";
+}
 const goCave = () => console.log("Going to cave.");
 const fightDragon = () => console.log("Fighting dragon.");

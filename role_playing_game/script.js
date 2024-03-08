@@ -36,6 +36,7 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
+// Game Functions
 const update = location => {
   button1.innerText = location["button text"][0];
   button2.innerText = location["button text"][1];
@@ -45,9 +46,11 @@ const update = location => {
   button3.onclick = location["button functions"][2];
   text.innerText = location.text;
 };
-const goTown = () => {
-  update();
-};
-const goStore = () => {}
+const goTown = () => update(locations[0]);
+const goStore = () => update(locations[1]);
 const goCave = () => console.log(`Going to cave.`);
 const fightDragon = () => console.log(`Fighting dragon.`);
+const buyHealth = () => {};
+const buyWeapon = () => {};
+const fightSlime = () => {};
+const fightBeast = () => {};

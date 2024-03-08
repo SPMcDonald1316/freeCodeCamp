@@ -54,9 +54,18 @@ const update = location => {
 };
 const goTown = () => update(locations[0]);
 const goStore = () => update(locations[1]);
-const goCave = () => console.log(`Going to cave.`);
+const goCave = () => update(locations[2]);
 const fightDragon = () => console.log(`Fighting dragon.`);
-const buyHealth = () => {};
+const buyHealth = () => {
+  if (gold >= 10) {
+    gold -= 10;
+    health += 10;
+    goldText.innerText = gold;
+  healthText.innerText = health;
+  } else {
+    text.innerText = 'You do not have enough gold to buy health.';
+  }
+};
 const buyWeapon = () => {};
 const fightSlime = () => {};
 const fightBeast = () => {};

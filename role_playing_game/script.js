@@ -1,3 +1,4 @@
+// Game Variables
 let xp = 0;
 let health = 100;
 let gold = 50;
@@ -6,6 +7,7 @@ let fighting;
 let monsterHealth;
 let inventory = ['stick'];
 
+// HTML Elements
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -16,6 +18,8 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+
+// Game Object Arrays
 const weapons = [
   {
     name: "stick",
@@ -32,6 +36,23 @@ const weapons = [
   {
     name: "sword",
     power: 100
+  }
+];
+const monsters = [
+  {
+    name: 'slime',
+    level: 2,
+    health: 15
+  },
+  {
+    name: 'fanged beast',
+    level: 8,
+    health: 60
+  },
+  {
+    name: 'dragon',
+    level: 20,
+    health: 300
   }
 ]
 const locations = [
@@ -60,7 +81,7 @@ button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
-// Game Functions
+// Travel Functions
 const update = location => {
   button1.innerText = location["button text"][0];
   button2.innerText = location["button text"][1];
@@ -74,14 +95,14 @@ const update = location => {
 const goTown = () => update(locations[0]);
 const goStore = () => update(locations[1]);
 const goCave = () => update(locations[2]);
-const fightDragon = () => console.log(`Fighting dragon.`);
 
+// Shopping Functions
 const buyHealth = () => {
   if (gold >= 10) {
     gold -= 10;
     health += 10;
     goldText.innerText = gold;
-  healthText.innerText = health;
+    healthText.innerText = health;
   } else {
     text.innerText = 'You do not have enough gold to buy health.';
   }
@@ -115,6 +136,9 @@ const sellWeapon = () => {
   } else {
     text.innerText = `Don't sell your only weapon!`;
   }
-}
+};
+
+// Fighting Functions
 const fightSlime = () => {};
 const fightBeast = () => {};
+const fightDragon = () => console.log(`Fighting dragon.`);

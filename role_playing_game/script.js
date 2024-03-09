@@ -105,5 +105,16 @@ const buyWeapon = () => {
     button2.onclick = sellWeapon;
   }
 };
+
+const sellWeapon = () => {
+  if (inventory.length > 1) {
+    gold += 15;
+    goldText.innerText = gold;
+    let currentWeapon = inventory.shift();
+    text.innerText = `You sold a ${currentWeapon}. In your inventory you have: ${inventory}`
+  } else {
+    text.innerText = `Don't sell your only weapon!`;
+  }
+}
 const fightSlime = () => {};
 const fightBeast = () => {};

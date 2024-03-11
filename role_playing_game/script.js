@@ -79,6 +79,12 @@ const locations = [
     buttonText: ['Attack', 'Dodge', 'Run'],
     buttonFunctions: [attack, dodge, goTown],
     text: 'You are fighting a monster.'
+  },
+  {
+    name: 'kill monster',
+    buttonText: ['Go to town square', 'Go to town square', 'Go to town square'],
+    buttonFunctions: [goTown, goTown, goTown],
+    text: 'The monster screams Arg! as it dies. You gain experience points and find gold.'
   }
 ];
 

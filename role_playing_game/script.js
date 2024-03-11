@@ -85,6 +85,12 @@ const locations = [
     buttonText: ['Go to town square', 'Go to town square', 'Go to town square'],
     buttonFunctions: [goTown, goTown, goTown],
     text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
+  },
+  {
+    name: 'lose',
+    buttonText: ['REPLAY?', 'REPLAY?', 'REPLAY?'],
+    buttonFunctions: [restart, restart, restart],
+    text: 'You die. &#x2620;'
   }
 ];
 

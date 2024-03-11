@@ -84,7 +84,7 @@ const locations = [
     name: 'kill monster',
     buttonText: ['Go to town square', 'Go to town square', 'Go to town square'],
     buttonFunctions: [goTown, goTown, goTown],
-    text: 'The monster screams Arg! as it dies. You gain experience points and find gold.'
+    text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
   }
 ];
 
@@ -95,6 +95,7 @@ button3.onclick = fightDragon;
 
 // Travel Functions
 const update = location => {
+  monsterStats.style.display = 'none';
   button1.innerText = location.buttonText[0];
   button2.innerText = location.buttonText[1];
   button3.innerText = location.buttonText[2];

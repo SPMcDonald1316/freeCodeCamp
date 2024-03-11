@@ -91,6 +91,12 @@ const locations = [
     buttonText: ['REPLAY?', 'REPLAY?', 'REPLAY?'],
     buttonFunctions: [restart, restart, restart],
     text: 'You die. &#x2620;'
+  },
+  {
+    name: 'win',
+    buttonText: ['REPLAY?', 'REPLAY?', 'REPLAY?'],
+    buttonFunctions: [restart, restart, restart],
+    text: 'You defeat the dragon! YOU WIN THE GAME! &#x1F389;'
   }
 ];
 
@@ -108,7 +114,7 @@ const update = location => {
   button1.onclick = location.buttonFunctions[0];
   button2.onclick = location.buttonFunctions[1];
   button3.onclick = location.buttonFunctions[2];
-  text.innerText = location.text;
+  text.innerHTML = location.text;
 };
 
 const goTown = () => update(locations[0]);

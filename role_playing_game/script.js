@@ -202,6 +202,10 @@ const attack = () => {
       defeatMonster();
     }
   }
+  if (Math.random() <= .1 && inventory.length !== 1) {
+    text.innerText += ` Your ${inventory.pop()} breaks.`;
+    currentWeapon--;
+  }
 }
 const getMonsterAttackValue = level => {
   const hit = (level * 5) - (Math.floor(Math.random() * xp));

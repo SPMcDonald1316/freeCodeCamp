@@ -21,3 +21,8 @@ const cleanInputString = str => {
   const regex = /[+-\s]/g;
   return str.replace(regex, '');
 }
+
+const isInvalidInput = str => {
+  const regex = /\d+e\d+/i;
+  return str.match(regex);
+}

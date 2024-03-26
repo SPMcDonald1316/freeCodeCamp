@@ -137,7 +137,21 @@ const shuffle = () => {
   pauseSong();
   setPlayerDisplay();
   setPlayButtonAccessibleText();
-}
+};
+
+const deleteSong = id => {
+  if (userData?.currentSong?.id === id) {
+    userData.currentSong = null;
+    userData.songCurrentTime = 0;
+    pauseSong();
+    setPlayerDisplay();
+  }
+
+  userData.songs = userData?.songs.filter(song => song.id !== id);
+  renderSongs(userData?.songs);
+  highlightCurrentSong();
+  setPlayButtonAccessibleText();
+};
 
 const setPlayerDisplay = () => {
   const playingSong = document.getElementById('player-song-title');
@@ -178,6 +192,7 @@ const renderSongs = array => {
         </button>
         <button 
           class="playlist-song-delete" aria-label="Delete ${song.title}"
+          onclick="deleteSong(${song.id})"
         >
           <svg 
             width="20" 

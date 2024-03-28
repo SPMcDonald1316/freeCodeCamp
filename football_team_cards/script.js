@@ -174,3 +174,8 @@ const myFavoriteFootballTeam = {
 Object.freeze(myFavoriteFootballTeam);
 const { sport, team, year, players } = myFavoriteFootballTeam;
 const { coachName } = myFavoriteFootballTeam.headCoach;
+
+teamName.textContent = team;
+typeOfSport.textContent = sport;
+worldCupYear.textContent = year;
+headCoach.textContent = coachName;

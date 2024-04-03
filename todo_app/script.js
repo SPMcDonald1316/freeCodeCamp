@@ -28,7 +28,8 @@ const addOrUpdateTask = () => {
   } else {
     taskData[dataArrIndex] = taskObj;
   }
-
+  
+  localStorage.setItem('data', JSON.stringify(taskData));
   updateTaskContainer();
   reset();
 };
@@ -91,7 +92,7 @@ closeTaskFormBtn.addEventListener('click', () => {
 
 
   if (formInputsContainValues && formInputsValuesUpdated) {
-    confirmCloseDialog.showModal() : 
+    confirmCloseDialog.showModal();
   } else {
     reset();
   }

@@ -69,6 +69,11 @@ const checkUserInput = () => {
     return;
   };
 
+  if (input === 5) {
+    showAnimation();
+    return;
+  }
+
   decimalToBinary(parseInt(numberInput.value));
   numberInput.value = '';
 }

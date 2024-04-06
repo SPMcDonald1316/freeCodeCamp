@@ -64,19 +64,20 @@ const showAnimation = () => {
 }
 
 const checkUserInput = () => {
-  if (!numberInput.value || isNaN(parseInt(numberInput.value))) {
+  const inputInt = parseInt(numberInput.value);
+  if (!numberInput.value || isNaN(inputInt)) {
     alert('Please provide a decimal number');
     return;
   };
 
-  if (input === 5) {
+  if (inputInt === 5) {
     showAnimation();
     return;
   }
 
-  decimalToBinary(parseInt(numberInput.value));
+  result.textContent = decimalToBinary(inputInt);
   numberInput.value = '';
-}
+};
 
 convertBtn.addEventListener('click', checkUserInput);
 

@@ -12,4 +12,9 @@ for (const row of rows) {
   result += "\n" + row
 }
 
-console.log(result)
+function padRow(rowNumber, rowCount) {
+  const spaces = " ".repeat(rowCount - rowNumber);
+  const charRepeat = 2 * rowNumber - 1;
+
+  return spaces + character.repeat(charRepeat) + spaces;
+}

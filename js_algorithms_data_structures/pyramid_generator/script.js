@@ -2,8 +2,8 @@ const character = "#";
 const count = 8;
 const rows = [];
 
-for (let i = 1; i <= count; i++) {
-  rows.push(character.repeat(i))
+for (let i = 0; i < count; i++) {
+  rows.push(padRow(i + 1, count))
 }
 
 let result = ""
@@ -18,3 +18,5 @@ function padRow(rowNumber, rowCount) {
 
   return spaces + character.repeat(charRepeat) + spaces;
 }
+
+console.log(result)

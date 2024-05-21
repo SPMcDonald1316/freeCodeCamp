@@ -56,8 +56,8 @@ function showResults(userOption) {
 function resetGame() {
   playerScore = 0;
   computerScore = 0;
-  playerScoreSpanElement = playerScore;
-  computerScoreSpanElement = computerScore;
+  playerScoreSpanElement.innerText = playerScore;
+  computerScoreSpanElement.innerText = computerScore;
 
   roundResultsMsg.innerText = "";
   winnerMsgElement.innerText = "";

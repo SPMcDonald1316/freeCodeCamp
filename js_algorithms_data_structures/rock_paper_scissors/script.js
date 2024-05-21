@@ -36,3 +36,16 @@ function getRoundResults(userOption) {
     return `Computer wins! ${computer} beats ${userOption}`;
   }
 }
+
+function showResults(userOption) {
+  roundResultsMsg.innerText = getRoundResults(userOption);
+  computerScoreSpanElement.innerText = computerScore;
+  playerScoreSpanElement.innerText = playerScore;
+
+  if (playerScore === 3 || computerScore === 3) {
+    winnerMsgElement.innerText = `${playerScore === 3 ? "Player" : "Computer"} has won the game!`;
+
+    optionsContainer.style.display = "none";
+    resetGameBtn.style.display = "block";
+  }
+}

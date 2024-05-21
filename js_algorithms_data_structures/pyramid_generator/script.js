@@ -2,9 +2,17 @@ const character = "#";
 const count = 8;
 const rows = [];
 
+/* Add characters to rows with for loop
 for (let i = 1; i <= count; i++) {
   rows.push(padRow(i, count))
 }
+*/
+
+/* Add chars with while loop
+while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count))
+}
+*/
 
 let result = ""
 

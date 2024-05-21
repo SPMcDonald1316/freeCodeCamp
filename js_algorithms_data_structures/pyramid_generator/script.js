@@ -29,7 +29,7 @@ for (let i = count; i > 0; i--) {
 */
 
 // Use array method to invert pyramid
-// Add if state to invert pyramid based on changing inverted var
+// Add if statement to invert pyramid based on changing inverted var
 for (let i = 1; i <= count; i++) {
   if (inverted) {
     rows.unshift(padRow(i, count));

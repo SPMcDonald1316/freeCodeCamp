@@ -49,3 +49,16 @@ function showResults(userOption) {
     resetGameBtn.style.display = "block";
   }
 }
+
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreSpanElement = playerScore;
+  computerScoreSpanElement = computerScore;
+
+  roundResultsMsg.innerText = "";
+  winnerMsgElement.innerText = "";
+
+  optionsContainer.style.display = "block";
+  resetGame.style.display = "none";
+}

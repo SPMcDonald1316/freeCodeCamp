@@ -1,3 +1,10 @@
+const playerScoreSpanElement = document.getElementById("player-score");
+const computerScoreSpanElement = document.getElementById("computer-score");
+const roundResultsMsg = document.getElementById("results-msg");
+const winnerMsgElement = document.getElementById("winner-msg");
+const optionsContainer = document.querySelector(".options-container");
+const resetGameBtn = document.getElementById("reset-game-btn");
+
 function getRandomComputerResult() {
   const options = ["Rock", "Paper", "Scissors"];
   const index = Math.floor(Math.random() * options.length);

@@ -4,6 +4,9 @@ const roundResultsMsg = document.getElementById("results-msg");
 const winnerMsgElement = document.getElementById("winner-msg");
 const optionsContainer = document.querySelector(".options-container");
 const resetGameBtn = document.getElementById("reset-game-btn");
+const rockBtn = document.getElementById("rock-btn");
+const paperBtn = document.getElementById("paper-btn");
+const scissorsBtn = document.getElementById("scissors-btn"); 
 
 function getRandomComputerResult() {
   const options = ["Rock", "Paper", "Scissors"];
@@ -62,3 +65,8 @@ function resetGame() {
   optionsContainer.style.display = "block";
   resetGame.style.display = "none";
 }
+
+rockBtn.addEventListener("click", () => { showResults("Rock") });
+paperBtn.addEventListener("click", () => { showResults("Paper") });
+scissorsBtn.addEventListener("click", () => { showResults("Scissors") });
+resetGameBtn.addEventListener("click", () => { resetGame() });

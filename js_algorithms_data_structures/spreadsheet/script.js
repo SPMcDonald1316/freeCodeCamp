@@ -1,6 +1,6 @@
-const range = (start, end) => Array(end - start + 1)
-                                .fill(start)
-                                .map((element, index) => element + index)
+const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index)
+
+const charRange = (start, end) => range(start.CharCodeAt(0), end.CharCodeAt(0)).map(code => String.fromCharCode(code));
 
 window.onload = () => {
   const container = document.getElementById("container");

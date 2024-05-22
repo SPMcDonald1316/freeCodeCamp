@@ -10,6 +10,12 @@ const median = nums => {
     : sorted[Math.ceil(middle)];
 }
 
+const spreadsheetFunction = {
+  sum,
+  average,
+  median
+}
+
 const range = (start, end) => Array(end - start + 1).fill(start).map((element, index) => element + index)
 
 const charRange = (start, end) => range(start.CharCodeAt(0), end.CharCodeAt(0)).map(code => String.fromCharCode(code));
@@ -34,5 +40,10 @@ window.onload = () => {
       container.appendChild(input);
     })
   })
+}
 
+const update = event => {
+  const element = event.target;
+  const value = element.value.replace(/\s/g, "");
+  if (!value.includes(element.id) && value.startsWith("=")) {}
 }

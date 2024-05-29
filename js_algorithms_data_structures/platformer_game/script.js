@@ -9,3 +9,10 @@ const checkpointMessage = document.querySelector(".checkpoint-screen > p");
 const ctx = canvas.getContex("2d");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
+
+// Game Function variables
+const gravity = 0.5;
+let isCheckpointCollisionDetectionActive = true;
+
+// Determine Game Layout Based on Screen Size
+const proportionalSize = size => innerHeight < 500 ? Math.ceil((size / 500) * innerHeight) : size;

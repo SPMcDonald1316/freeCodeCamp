@@ -61,3 +61,15 @@ class Player {
     }
   }
 }
+
+// Create Player Instance
+const player = Player();
+
+// Game Functions
+const startGame = () => {
+  canvas.style.display = "block";
+  startScreen.style.display = "none";
+  player.draw()
+}
+
+startBtn.addEventListener("click", startGame);

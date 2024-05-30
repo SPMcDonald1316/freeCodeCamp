@@ -6,7 +6,7 @@ const checkpointScreen = document.querySelector(".checkpoint-screen");
 const checkpointMessage = document.querySelector(".checkpoint-screen > p");
 
 // Setup Canvas API
-const ctx = canvas.getContex("2d");
+const ctx = canvas.getContext("2d");
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
@@ -63,7 +63,7 @@ class Player {
 }
 
 // Create Player Instance
-const player = Player();
+const player = new Player();
 
 // Game Functions
 const animate = () => {

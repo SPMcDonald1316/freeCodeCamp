@@ -17,7 +17,7 @@ let isCheckpointCollisionDetectionActive = true;
 // Determine Game Layout Based on Screen Size
 const proportionalSize = size => innerHeight < 500 ? Math.ceil((size / 500) * innerHeight) : size;
 
-// Player Characteristics
+// Player
 class Player {
   constructor() {
     this.position = {
@@ -59,6 +59,15 @@ class Player {
     if (this.position.x >= canvas.width - 2 * this.width) {
       this.position.x = canvas.width - 2 * this.width;
     }
+  }
+}
+
+// Platform
+class Platform {
+  constructor(x, y) {
+    this.position = { x, y }
+    this.width = 200;
+    this.height = proportionalSize(40);
   }
 }
 

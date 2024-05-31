@@ -47,7 +47,7 @@ class Player {
         this.position.y = 0;
         this.velocity.y = gravity;
       }
-      this.velocity.y = gravity;
+      this.velocity.y += gravity;
     } else {
       this.velocity.y = 0;
     }
@@ -113,13 +113,38 @@ const animate = () => {
     player.velocity.x = -5;
   } else {
     player.velocity.x = 0;
+    if (keys.rightKey.pressed && isCheckpointCollisionDetectionActive) {
+      platforms.forEach(platform => platform.position.x -= 5);
+    } else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
+      platforms.forEach(platform => platform.position.x += 5);
+    }
   }
 
-  if (keys.rightKey.pressed && isCheckpointCollisionDetectionActive) {
-    platforms.forEach(platform => platform.position.x -= 5);
-  } else if (keys.leftKey.pressed && isCheckpointCollisionDetectionActive) {
-    platforms.forEach(platform => platform.position.x += 5);
-  }
+  platforms.forEach(platform => {
+    const collisionDetectionRules = [
+      player.position.y + player.height <= platform.position.y,
+      player.position.y + player.velocity.y + player.height >= platform.position.y,
+      player.position.x >= platform.position.x - player.width / 2,
+      player.position.x <= platform.position.x + platform.width - player.width / 3
+    ];
+
+    if (collisionDetectionRules.every(rule => rule)) {
+      player.velocity.y = 0;
+      return;
+    };
+
+    const platformDetectionRules = [
+      player.position.x >= platform.position.x - player.width / 2,
+      player.position.x <= platform.position.x + platform.width - player.width / 3,
+      player.position.y + player.height >= platform.position.y,
+      player.position.y <= platform.position.y + platform.height
+    ];
+
+    if (platformDetectionRules.every(rule => rule)) {
+      player.position.y = platform.position.y + player.height;
+      player.velocity.y = gravity;
+    };
+  });
 }
 
 const keys = {
@@ -149,15 +174,14 @@ const movePlayer = (key, xVelocity, isPressed) => {
     case "ArrowUp":
     case " ":
     case "Spacebar":
-      player.velocity.y = -8;
+      player.velocity.y -= 8;
       break;
     case "ArrowRight":
       keys.rightKey.pressed = isPressed;
       if (xVelocity === 0) {
-        player.velocity.x = 0;
+        player.velocity.x = xVelocity;
       }
       player.velocity.x += xVelocity;
-      break;
   }
 }
 

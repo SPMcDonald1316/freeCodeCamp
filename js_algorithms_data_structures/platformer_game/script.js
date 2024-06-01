@@ -101,7 +101,7 @@ class Checkpoint {
 // Create Player Instance
 const player = new Player();
 
-// Platform Location Data
+// Platform Position Data
 const platformPositions = [
   { x: 500, y: proportionalSize(450) },
   { x: 700, y: proportionalSize(400) },
@@ -117,8 +117,18 @@ const platformPositions = [
   { x: 4700, y: proportionalSize(150) }
 ]
 
-// Create platform instances
+// Create Platform Instances
 const platforms = platformPositions.map(platform => new Platform(platform.x, platform.y));
+
+// Checkpoint Position Data
+const checkpointPositions = [
+  { x: 1170, y: proportionalSize(80), z: 1 },
+  { x: 2900, y: proportionalSize(330), z: 2 },
+  { x: 4800, y: proportionalSize(80), z: 3 }
+]
+
+// Create Checkpoint Instances
+const checkpoints = checkpointPositions.map(checkpoint => new Checkpoint(checkpoint.x, checkpoint.y, checkpoint.z));
 
 // Game Functions
 const animate = () => {

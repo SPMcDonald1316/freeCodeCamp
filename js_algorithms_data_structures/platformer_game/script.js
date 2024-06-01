@@ -62,7 +62,7 @@ class Player {
   }
 }
 
-// Platform
+// Platform Class
 class Platform {
   constructor(x, y) {
     this.position = { x, y }
@@ -74,6 +74,16 @@ class Platform {
     ctx.fillStyle = "#acd157";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
+}
+
+// Checkpoint Class
+class Checkpoint {
+  constructor(x, y, z) {
+    this.position = { x, y }
+    this.width = proportionalSize(40);
+    this.height = proportionalSize(70);
+    this.claimed = false;
+  };
 }
 
 // Create Player Instance

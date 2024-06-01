@@ -181,6 +181,21 @@ const animate = () => {
       player.velocity.y = gravity;
     };
   });
+
+  checkpoints.forEach((checkpoint, index, checkpoints) => {
+    const checkpointDetectionRules = [
+      player.position.x >= checkpoint.position.x,
+      player.position.y >= checkpoint.position.y,
+      player.position.y + player.height <= checkpoint.position.y + checkpoint.height,
+      isCheckpointCollisionDetectionActive,
+      player.position.x - player.width <= checkpoint.position.x - checkpoint.width + player.width * 0.9,
+      index === 0 || checkpoints[index - 1].claimed === true
+    ];
+
+    if (checkpointDetectionRules.every(rule => rule)) {
+      checkpoint.claim();
+    }
+  })
 }
 
 const keys = {

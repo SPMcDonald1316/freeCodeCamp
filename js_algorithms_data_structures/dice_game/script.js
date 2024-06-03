@@ -1,3 +1,4 @@
+// HTML Elements
 const listOfAllDice = document.querySelectorAll(".die");
 const scoreInputs = document.querySelectorAll("#score-options input");
 const scoreSpans = document.querySelectorAll("#score-options span");
@@ -9,3 +10,11 @@ const rollDiceBtn = document.getElementById("roll-dice-btn");
 const keepScoreBtn = document.getElementById("keep-score-btn");
 const rulesContainer = querySelector(".rules-container");
 const rulesBtn = document.getElementById("rules-btn");
+
+// Game Tracking Variables
+let isModalShowing = false;
+let diceValuesArr = [];
+let score = 0;
+let totalScore = 0;
+let rolls = 0;
+let round = 1;

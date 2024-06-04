@@ -37,6 +37,12 @@ const updateStats = () => {
   currentRoundText.textContent = round;
 };
 
+const updateRadioOption = (optionNode, score) => {
+  scoreInputs[optionNode].disabled = false;
+  scoreInputs[optionNode].value = score;
+  scoreSpans[optionNode].textContent = `, score = ${score}`;
+}
+
 // Event Listeners
 rulesBtn.addEventListener("click", () => {
   isModalShowing = !isModalShowing;
@@ -58,4 +64,4 @@ rollDiceBtn.addEventListener("click", () => {
     rollDice();
     updateStats();
   }
-})
+});

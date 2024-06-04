@@ -79,6 +79,15 @@ const getHighestDuplicates = arr => {
   }
 
   updateRadioOption(5, 0);
+};
+
+const resetRadioOption = () => {
+  scoreInputs.forEach(input => {
+    input.disabled = true;
+    input.checked = false;
+  })
+
+  scoreSpans.forEach(span => span.textContent = "");
 }
 
 // Event Listeners

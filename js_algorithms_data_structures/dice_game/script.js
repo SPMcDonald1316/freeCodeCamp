@@ -30,7 +30,12 @@ const rollDice = () => {
   listOfAllDice.forEach((dice, index) => {
     dice.textContent = diceValuesArr[index];
   })
-}
+};
+
+const updateStats = () => {
+  currentRoundRollsText.textContent = rolls;
+  currentRoundText.textContent = round;
+};
 
 // Event Listeners
 rulesBtn.addEventListener("click", () => {
@@ -50,6 +55,7 @@ rollDiceBtn.addEventListener("click", () => {
     alert("You have made three rolls this round. Please select a score.");
   } else {
     rolls++;
-    rollDice()
+    rollDice();
+    updateStats();
   }
 })

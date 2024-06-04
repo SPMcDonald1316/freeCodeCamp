@@ -90,6 +90,13 @@ const resetRadioOption = () => {
   scoreSpans.forEach(span => span.textContent = "");
 }
 
+const updateScore = (selectedValue, achieved) => {
+  totalScore += parseInt(selectedValue);
+  totalScoreText.textContent = totalScore;
+
+  scoreHistory.innerHTML = `<li>${achieved} : ${selectedValue}</li>`;
+}
+
 // Event Listeners
 rulesBtn.addEventListener("click", () => {
   isModalShowing = !isModalShowing;
@@ -108,7 +115,37 @@ rollDiceBtn.addEventListener("click", () => {
     alert("You have made three rolls this round. Please select a score.");
   } else {
     rolls++;
+    resetRadioOption();
     rollDice();
     updateStats();
+  }
+});
+
+keepScoreBtn.addEventListener("click", () => {
+  let selectedValue;
+  let achieved;
+
+  for (const radioBtn of scoreInputs) {
+    if (radioBtn.checked) {
+      selectedValue = radioBtn.value;
+      achieved = radioBtn.id;
+      break;
+    }
+  }
+
+  if (selectedValue) {
+    rolls = 0;
+    round++;
+    updateStats();
+    resetRadioOption();
+    updateScore(selectedValue, achieved);
+
+    if (round > 6) {
+      setTimeout(() => {
+        alert(`Game Over! Your total score is ${totalScore}`);
+      }, 500);
+    } 
+  } else {
+    alert("Please select an option or roll the dice");
   }
 });

@@ -131,7 +131,24 @@ const detectFullHouse = arr => {
   }
 
   updateRadioOption(5, 0);
-}
+};
+
+const checkForStraights = arr => {
+  const sorted = arr.sort((a, b) => a - b);
+  const uniqueNumbers = [...new Set(sorted)];
+  const uniqueStr = uniqueNumbers.join("");
+
+  const smallStraights = ["1234", "2345", "3456"];
+  const largeStraights = ["12345", "23456"];
+
+  if (smallStraights.forEach(straight => uniqueStr.includes(straight))) {
+    updateRadioOption(3, 30);
+  }
+
+  if (largeStraights.includes(uniqueStr)) {
+    updateRadioOption(4, 40);
+  }
+};
 
 // Event Listeners
 rulesBtn.addEventListener("click", () => {
@@ -156,6 +173,7 @@ rollDiceBtn.addEventListener("click", () => {
     updateStats();
     getHighestDuplicates(diceValuesArr);
     detectFullHouse(diceValuesArr);
+    checkForStraights(diceValuesArr);
   }
 });
 

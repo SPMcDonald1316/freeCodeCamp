@@ -25,3 +25,11 @@ const displayAuthors = authors => {
     `;
   });
 };
+
+const fetchMoreAuthors = () => {
+  start += 8;
+  end += 8;
+  displayAuthors(authorData.slice(start, end));
+};
+
+loadMoreBtn.addEventListener("click", fetchMoreAuthors);

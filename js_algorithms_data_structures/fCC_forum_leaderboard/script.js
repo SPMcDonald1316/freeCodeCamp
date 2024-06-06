@@ -20,7 +20,7 @@ const fetchData = async () => {
 
 fetchData();
 
-// Time Conversion for Last Activiy
+// Time Conversion for Last Activity
 const lastActivity = time => {
   const currentTime = new Date();
   const lastPost = new Date(time);
@@ -43,6 +43,13 @@ const lastActivity = time => {
   return `${days}d ago`;
 };
 
+// View counts readable format
+const viewCount = views => {
+  const thousands = Math.floor(views / 1000);
+
+  return views >= 1000 ? `${thousands}k` : views;
+}
+
 const showLatestPosts = data => {
   const { topic_list, users } = data;
   const { topics } = topic_list;
@@ -57,14 +64,14 @@ const showLatestPosts = data => {
       posters_id,
       bumped_at
     } = item;
-co
+
     return `
       <tr>
         <td><p class="post-title">${title}</p></td>
         <td></td>
         <td>${posts_count - 1}</td>
-        <td>${views}</td>
-        <td></td>
+        <td>${viewCount(views)}</td>
+        <td>${lastActivity(bumped_at)}</td>
       </tr>
     `
   }).join("");

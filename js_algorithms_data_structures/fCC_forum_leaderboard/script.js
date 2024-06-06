@@ -8,7 +8,7 @@ const avatarUrl = "https://sea1.discourse-cdn.com/freecodecamp";
 const postsContainer = document.getElementById("posts-container");
 
 // Category Data
-const allCategories = {
+const categories = {
   299: {
     category: "Career Advice",
     className: "career"
@@ -86,6 +86,28 @@ const viewCount = views => {
   return views >= 1000 ? `${thousands}k` : views;
 }
 
+// Convert cateogry data into links
+const forumCategory = id => {
+  let selected = {};
+
+  if (categories.hasOwnProperty(id)) {
+    const { category, className } = categories;
+    selected.category = category;
+    selected.className = className;
+  } else {
+    selected.category = "General";
+    selected.className = "general";
+    selected.id = 1;
+  }
+
+  const url = `${forumCategoryUrl}${selected.className}/${id}`;
+  const linkText = selected.category;
+  const linkClass = selected.className;
+
+  return `<a href="${url}" class="${linkClass}" target="_blank">${linkText}</a>`;
+}
+
+// Display Posts
 const showLatestPosts = data => {
   const { topic_list, users } = data;
   const { topics } = topic_list;
@@ -97,13 +119,17 @@ const showLatestPosts = data => {
       views,
       posts_count,
       slug,
-      posters_id,
+      posters,
+      category_id,
       bumped_at
     } = item;
 
     return `
       <tr>
-        <td><p class="post-title">${title}</p></td>
+        <td>
+          <p class="post-title">${title}</p>
+          ${forumCategory(category_id)}
+        </td>
         <td></td>
         <td>${posts_count - 1}</td>
         <td>${viewCount(views)}</td>

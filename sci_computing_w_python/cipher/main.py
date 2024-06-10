@@ -1,7 +1,7 @@
-# Caesar Cipher
 text = 'Hello World'
 shift = 3
 
+# Caesar Cipher
 def caesar(message, offset):
   alphabet = 'abcdefghijklmnopqrstuvwxyz'
   encrypted_text = ''
@@ -18,3 +18,6 @@ def caesar(message, offset):
   print('encrypted text:', encrypted_text)
 
 caesar(text, shift)
+print()
+
+# Vigenère Cipher

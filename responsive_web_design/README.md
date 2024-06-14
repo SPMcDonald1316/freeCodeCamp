@@ -67,3 +67,13 @@ Use pseudo selectors to change specific HTML elements
 Change style of an element on hover
 Trigger other events on webpage
 </pre>
+
+### Cat Painting
+<pre>
+CSS Positioning
+Use position to create visually appealing and responsive layouts
+Create Cat painting to learn CSS properties such as:
+  - position
+  - z-index
+  - transform
+</pre>

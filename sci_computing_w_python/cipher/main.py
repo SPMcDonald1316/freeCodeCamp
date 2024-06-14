@@ -29,7 +29,7 @@ print()
 custom_key = 'python'
 
 # Vigenère Cipher
-def vigenere(message, key):
+def vigenere(message, key, direction):
   key_index = 0
   vigenere_text = ''
 
@@ -45,7 +45,7 @@ def vigenere(message, key):
       # Define the offset and the encrypted letter
       offset = alphabet.index(key_char)
       index = alphabet.find(char)
-      new_index = (index + offset) % len(alphabet)
+      new_index = (index + offset * direction) % len(alphabet)
       vigenere_text += alphabet[new_index]
   
   return vigenere_text
@@ -53,3 +53,5 @@ def vigenere(message, key):
 encryption = vigenere(text, custom_key)
 print('Vigenère encoding:', encryption)
 print()
+decryption = vigenere(encryption, custom_key, -1)
+print('Decrypted Vigenère:', decryption)

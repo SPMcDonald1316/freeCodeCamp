@@ -39,3 +39,31 @@ Build a Rothko style painting using CSS and the Box Model
 Learn CSS Flexbox
 Use Flexbox to make a photo gallery webpage that is responsive to multiple screen sizes
 </pre>
+
+### Nutrition Label
+<pre>
+Learn Typography
+Style text to be more easily readable and suit multiple purposes
+Use CSS to:
+  - style text
+  - adjust line height
+  - position text
+</pre>
+
+### Quiz
+<pre>
+Learn Accessibility
+Make a webpage easy to use for all people
+Accessbility Tools:
+  - keyboard shortcuts
+  - ARIA attributes
+  - design best practices
+</pre>
+
+### Balance Sheet
+<pre>
+CSS Pseudo Selectors
+Use pseudo selectors to change specific HTML elements
+Change style of an element on hover
+Trigger other events on webpage
+</pre>

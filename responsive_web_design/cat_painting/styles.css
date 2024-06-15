@@ -72,3 +72,22 @@ body {
   left: 134px;
   transform: rotate(-25deg);
 }
+
+.inner-eye {
+  position: absolute;
+  top: 8px;
+  border-radius: 60%;
+  width: 10px;
+  height: 20px;
+  background-color: #fff;
+}
+
+.in-eye-l {
+  left: 2px;
+  transform: rotate(10deg);
+}
+
+.in-eye-r {
+  left: 18px;
+  transform: rotate(-5deg);
+}

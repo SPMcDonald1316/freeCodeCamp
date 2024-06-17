@@ -33,3 +33,8 @@ def main():
       print_expenses(expenses)
     elif choice == '3':
       print('\nTotal Expenses:', total_expenses(expenses))
+    elif choice == '4':
+      category = input('Enter category to filter: ')
+      print(f'\nExpenses for {category}:')
+      expenses_for_category = filter_expenses_by_category(expenses, category)
+      print_expenses(expenses_for_category)

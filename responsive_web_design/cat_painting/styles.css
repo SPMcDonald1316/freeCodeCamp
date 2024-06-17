@@ -126,3 +126,44 @@ body {
   left: 91px;
   transform: rotate(165deg);
 }
+
+.left div, .right div {
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+}
+
+.left div {
+  left: 52px
+}
+
+.l-top {
+  top: 120px;
+  transform: rotate(10deg)
+}
+.l-mid {
+  top: 127px;
+  transform: rotate(3deg)
+}
+.l-bottom {
+  top: 134px;
+  transform: rotate(-3deg)
+}
+
+.right div {
+  left: 109px;
+}
+
+.r-top {
+  top: 120px;
+  transform: rotate(-10deg);
+}
+.r-mid {
+  top: 127px;
+  transform: rotate(-3deg);
+}
+.r-bottom {
+  top: 134px;
+  transform: rotate(3deg);
+}

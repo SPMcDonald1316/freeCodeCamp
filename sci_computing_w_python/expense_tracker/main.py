@@ -38,3 +38,8 @@ def main():
       print(f'\nExpenses for {category}:')
       expenses_for_category = filter_expenses_by_category(expenses, category)
       print_expenses(expenses_for_category)
+    elif choice == '5':
+      print('Exiting the program.')
+      break
+
+main()

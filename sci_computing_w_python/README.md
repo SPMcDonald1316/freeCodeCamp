@@ -18,3 +18,10 @@ Vigenère cipher
 Learn numerical computation and string manipulation in Python
 Build a program that uses the Luhn Algorithm
 </pre>
+
+### Expense Tracker
+<pre>
+Learn to use lambda functions in Python
+Use lambda functions to create efficient streamlined
+operations in building an expense tracker
+</pre>

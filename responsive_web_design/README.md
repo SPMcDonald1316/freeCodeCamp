@@ -77,3 +77,11 @@ Create Cat painting to learn CSS properties such as:
   - z-index
   - transform
 </pre>
+
+### Piano
+<pre>
+Build a piano
+Use CSS and Responsive Design to resize for different screens
+Learn media queries and pseudo selectors
+</pre>
+

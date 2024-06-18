@@ -25,3 +25,10 @@ Learn to use lambda functions in Python
 Use lambda functions to create efficient streamlined
 operations in building an expense tracker
 </pre>
+
+### Case Converter
+<pre>
+A program that takes a string formatted in Camel or Pascal
+case and convert it to snake case.
+Learn to use list comprehension in Python
+</pre>

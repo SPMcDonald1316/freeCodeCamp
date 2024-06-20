@@ -32,3 +32,10 @@ A program that takes a string formatted in Camel or Pascal
 case and convert it to snake case.
 Learn to use list comprehension in Python
 </pre>
+
+### Finding the Square Root of a Number
+<pre>
+Learn the Bisection Method
+Iteratively narrow down the possible range of values that
+contain the square root
+</pre>

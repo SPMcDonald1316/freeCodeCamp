@@ -85,3 +85,9 @@ Use CSS and Responsive Design to resize for different screens
 Learn media queries and pseudo selectors
 </pre>
 
+### City Skyline
+<pre>
+Learn to use CSS Variables
+Reuse colors throughout project building a city skyline
+</pre>
+

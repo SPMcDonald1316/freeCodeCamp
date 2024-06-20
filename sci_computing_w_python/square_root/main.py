@@ -12,3 +12,22 @@ def square_root_bisection(target, tolerance=1e-7, iterations=100):
     low = 0
     high = max(1, target)
     root = None
+
+    for _ in range(iterations):
+      mid = (low + high) / 2
+      square = mid ** 2
+
+      if abs(square - target) < tolerance:
+        root = mid
+        break
+      elif square < target:
+        low = mid
+      else:
+        high = mid
+
+    if root is None:
+      print(f'Failed to converge within {iterations} iterations.')
+    else:
+      print(f'The square root of {target} is approximately {root}')
+  
+  return root

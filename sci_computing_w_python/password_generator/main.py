@@ -1,7 +1,7 @@
 import secrets
 import string
 
-def generate_password(length):
+def generate_password(length, nums, special_chars, uppercase, lowercase):
   # Define the possible chars for password
   letters = string.ascii_letters
   digits = string.digits
@@ -11,9 +11,17 @@ def generate_password(length):
   all_chars = letters + digits + symbols
 
   #Generate password
-  password = ''
-  for _ in range(length):
-    password += secrets.choice(all_chars)
+  while True:
+    password = ''
+    for _ in range(length):
+      password += secrets.choice(all_chars)
+    
+    constraints = [
+      (nums, '[0-9]'),
+      (lowercase, '[a-z]'),
+      (uppercase, '[A-Z]'),
+      (special_chars, '')
+    ]
 
   return password
 

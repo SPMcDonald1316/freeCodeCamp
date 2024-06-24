@@ -39,3 +39,10 @@ Learn the Bisection Method
 Iteratively narrow down the possible range of values that
 contain the square root
 </pre>
+
+### Password Generator
+<pre>
+Build a password generator
+Learn to import modules from the standard library
+Learn regular expressions
+</pre>

@@ -46,3 +46,13 @@ Build a password generator
 Learn to import modules from the standard library
 Learn regular expressions
 </pre>
+
+### Shortest Path Algorithm
+<pre>
+Implement a shortest path algorithm
+Learn algorithm design using
+  - functions
+  - loops
+  - conditionals
+  - dictionary comprehensions
+</pre>

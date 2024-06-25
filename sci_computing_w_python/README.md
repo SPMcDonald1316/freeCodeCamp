@@ -56,3 +56,10 @@ Learn algorithm design using
   - conditionals
   - dictionary comprehensions
 </pre>
+
+### Tower of Hanoi
+<pre>
+Build program to solve tower of hanoi puzzle
+Learn Recursion by solving both iteratively as well as
+recursively and comparing solutions
+</pre>

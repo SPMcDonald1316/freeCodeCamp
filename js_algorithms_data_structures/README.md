@@ -66,3 +66,29 @@ getMonth(), and getFullYear().
 Use string methods to format date based on dropdown menu 
 selection.
 </pre>
+
+### Football Team Cards
+<pre>
+Learn to process data and output the information on the screen.
+Learn DOM manipulation, object destructuring, event handling, 
+and data filtering.
+Use JS concepts like switch statements, default params, 
+Object.freeze(), the map() method.
+</pre>
+
+### Todo App
+<pre>
+Learn to persist information using local storage
+Handle form inputs, manage local storage, perform CRUD 
+(Create, Read, Update, Delete) operations on tasks, 
+implement event listeners and toggle UI elements.
+</pre>
+
+### Decimal to Binary Converter
+<pre>
+Build webpage that take decimal input from user and displays
+the binary equivalent.
+Use recursion to convert the decimal number to binary.
+If user enters 5 display an animation showing how recursion
+and the call stack work.
+</pre>

@@ -32,9 +32,9 @@ const animationData = [
 const decimalToBinary = input => {
   if (input === 0 || input === 1) {
     return String(input)
+  } else {
+    return decimalToBinary(Math.floor(input / 2)) + (input % 2);
   }
-
-  return decimalToBinary(Math.floor(input / 2)) + (input % 2);
 };
 
 const showAnimation = () => {
@@ -42,16 +42,20 @@ const showAnimation = () => {
 
   animationData.forEach(obj => {
     setTimeout(() => {
-      animationContainer.innerHTML = `
+      animationContainer.innerHTML += `
         <p
           id="${obj.inputVal}"
-          style="margin-top: ${obj.marginTop}px"
+          style="margin-top: ${obj.marginTop}px;"
           class="animation-frame"
         >
           decimalToBinary(${obj.inputVal})
         </p>
       `;
     }, obj.addElDelay);
+
+    setTimeout(() => {
+      document.getElementById(obj.inputVal).textContent = obj.msg;
+    }, obj.showMsgDelay);
 
     setTimeout(() => {
       document.getElementById(obj.inputVal).remove();

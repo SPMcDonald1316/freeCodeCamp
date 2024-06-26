@@ -1,10 +1,17 @@
 NUMBER_OF_DISKS = 3
-number_of_moves = 2**NUMBER_OF_DISKS - 1
-rods = {
-  'A': list(range(NUMBER_OF_DISKS, 0, -1)),
-  'B': [],
-  'C': []
-}
+
+# Var and Dict for Iteration
+# number_of_moves = 2**NUMBER_OF_DISKS - 1
+# rods = {
+#   'A': list(range(NUMBER_OF_DISKS, 0, -1)),
+#   'B': [],
+#   'C': []
+# }
+
+# Vars for Recursion
+A = list(range(NUMBER_OF_DISKS, 0, -1))
+B = []
+C = []
 
 # ITERATIVE SOLUTION
 # def make_allowed_move(rod1, rod2):
@@ -48,8 +55,24 @@ rods = {
 
 # RECURSIVE SOLUTION
 def move(n, source, auxiliary, target):
-  # display starting configuration
-  print(rods, '\n')
+  # Base Case
+  if n <= 0:
+    return
   
+  # move n - 1 disks from source to auxiliary
+  move(n - 1, source, target, auxiliary)
+
+  # move nth disk from source to target
+  target.append(source.pop())
+
+  # display progess
+  print(f'''
+        A -> {A} 
+        B -> {B}
+        C -> {C}''')
+  
+  # move n - 1 disks from auxiliary to target
+  move(n - 1, auxiliary, source, target)
+
 # initiate call from source A to target C with aux B
-move(NUMBER_OF_DISKS, 'A', 'B', 'C')
+move(NUMBER_OF_DISKS, A, B, C)

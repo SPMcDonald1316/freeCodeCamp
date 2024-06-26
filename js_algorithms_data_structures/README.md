@@ -92,3 +92,31 @@ Use recursion to convert the decimal number to binary.
 If user enters 5 display an animation showing how recursion
 and the call stack work.
 </pre>
+
+### Spam Filter
+<pre>
+Learn more about regular expressions and use them to build a
+spam filter.
+Cover regex techniques: capture groups, positive and negative
+lookaheads, and more.
+</pre>
+
+### Number Sorter
+<pre>
+Build webpage to take number input through dropdown menus
+and sort and display the numbers.
+Learn different sorting algorithms, write separate 
+functions that use Bubble Sort, Selection Sort and 
+Insertion Sort to do the sorting.
+</pre>
+
+### Statistics Calculator
+<pre>
+Web pages that takes a list of comma separated numbers 
+and displays statistical information such as mean, median
+, mode, range, variance, and standard deviation.
+Use array manipulation methods map(), reduce(), and filter()
+Learn handling user input, DOM manipulation, and method 
+chaining.
+Practice performing statistical calculations.
+</pre>

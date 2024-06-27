@@ -32,3 +32,10 @@ def merge_sort(array):
     array[sort_index] = right[right_index]
     right_index += 1
     sort_index += 1
+
+
+if __name__ == '__main__':
+  numbers = [4, 10, 6, 14, 2, 1, 8, 5]
+  print('Unsorted array:', numbers, '\n')
+  merge_sort(numbers)
+  print('Sorted array:', numbers)

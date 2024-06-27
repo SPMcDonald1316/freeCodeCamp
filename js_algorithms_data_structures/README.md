@@ -146,3 +146,28 @@ Learn more advanced aspects of OOP
 Learn about classes, objects, inheritance, and encapsulation.
 Learn how to design and organize game elements efficiently
 </pre>
+
+### Dice Game
+<pre>
+Practice algorithmic thinking by building a dice game
+Manage game state, implement game logic for rolling dice,
+keeping score, and apply rules for various combinations.
+Cover concepts such as event handling, array manipulation
+conditional logic, and updating the UI dynamically based 
+on game state.
+</pre>
+
+### fCC Authors Page
+<pre>
+Learn to fetch data from an external API
+Work with asynchronus JavaScript
+Use the fetch method, dynamically update the DOM, and 
+learn pagination to load results in batches.
+</pre>
+
+### fCC Forum Leaderboard
+<pre>
+Gain more practice with asynchronus concepts
+Learn the fetch API, promises, Async/Await, and the 
+try...catch statement
+</pre>

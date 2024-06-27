@@ -91,3 +91,8 @@ Learn to use CSS Variables
 Reuse colors throughout project building a city skyline
 </pre>
 
+### Magazine
+<pre>
+Build a layout for a magazine article
+Learn how to use CSS Grid, grid rows, and grid columns
+</pre>

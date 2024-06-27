@@ -96,3 +96,10 @@ Reuse colors throughout project building a city skyline
 Build a layout for a magazine article
 Learn how to use CSS Grid, grid rows, and grid columns
 </pre>
+
+### Ferris Wheel
+<pre>
+Learn CSS animation
+Learn to animate elements, transform them, and adjust 
+their speed
+</pre>

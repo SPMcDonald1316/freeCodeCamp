@@ -5,4 +5,7 @@
   position: absolute;
   height: 55vw;
   width: 55vw;
+  max-width: 500px;
+  max-height: 500px;
 }
+

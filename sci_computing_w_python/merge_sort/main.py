@@ -17,5 +17,15 @@ def merge_sort(array):
     else:
       array[sort_index] = right[right_index]
       right_index += 1
-      
+
+    sort_index += 1
+
+  while left_index < len(left):
+    array[sort_index] = left[left_index]
+    left_index += 1
+    sort_index += 1
+  
+  while right_index < len(right):
+    array[sort_index] = right[right_index]
+    right_index += 1
     sort_index += 1

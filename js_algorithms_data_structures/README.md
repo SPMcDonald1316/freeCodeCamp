@@ -120,3 +120,29 @@ Learn handling user input, DOM manipulation, and method
 chaining.
 Practice performing statistical calculations.
 </pre>
+
+### Spreadsheet
+<pre>
+Learn Functional Programming concepts by building a 
+spreadsheet.
+Parse and evaluate mathematical expressions, implement
+spreadsheet functions, handle cell references, and create
+interactive web interfaces.
+</pre>
+
+### Shopping Cart
+<pre>
+Learn the basics of Object Oriented Programming
+Learn to define classes and use them.
+Create class instances and implement methods for data
+manipulation.
+Cover JS concepts: ternary operator, spread operator, and
+this keyword.
+</pre>
+
+### Platformer Game
+<pre>
+Learn more advanced aspects of OOP
+Learn about classes, objects, inheritance, and encapsulation.
+Learn how to design and organize game elements efficiently
+</pre>

@@ -63,3 +63,9 @@ Build program to solve tower of hanoi puzzle
 Learn Recursion by solving both iteratively as well as
 recursively and comparing solutions
 </pre>
+
+### Merge Sort
+<pre>
+Learn to interact with data structures in Python while 
+impletementing the merge sort algorithm.
+</pre>

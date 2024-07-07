@@ -1,3 +1,5 @@
+/* BACKGROUND ELEMENTS */
+
 body {
   background: linear-gradient(
     45deg,
@@ -60,9 +62,22 @@ body {
   right: -75px;
 }
 
+/* PENGUIN ELEMENTS */
+
 .penguin {
   width: 300px;
   height: 300px;
   margin: auto;
   margin-top: 75px;
+}
+
+.head {
+  width: 50%;
+  height: 45%;
+  background: linear-gradient(
+    45deg,
+    gray,
+    rgb(239, 240, 228)
+  );
+  border-radius: 70% 70% 65% 65%;
 }

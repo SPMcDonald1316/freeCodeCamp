@@ -103,3 +103,10 @@ Learn CSS animation
 Learn to animate elements, transform them, and adjust 
 their speed
 </pre>
+
+### Penguin
+<pre>
+Practice more with CSS transforms and animation
+Build a penguin and animate it
+</pre>
+
